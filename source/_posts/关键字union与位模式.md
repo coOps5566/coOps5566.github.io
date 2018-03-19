@@ -37,8 +37,8 @@ int64 _integer_splice(int32 enter1, int32 enter2){
 下面用int型和float型举例。
 
 ```cpp
-int main(void)
-{
+int main(void){
+
 	float f= 1.0;
 	int i = f;
 	printf("i=%d\n", i); //输出1
