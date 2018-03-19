@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hello World | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="关键字union与位模式关键字union申请一块内存，指定几种类型都可以使用。但是要注意取值时的位模式解释。 讲解定义和使用的文章，英文的，但很清晰。 应用场景：按位拼接 比如拼接两个32位int成为一个64位1234567891011121314151617int64 _integer_splice(int32 enter1, int32 enter2)&amp;#123;    typedef uni">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://yoursite.com/2018/03/19/关键字union与位模式/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="关键字union与位模式关键字union申请一块内存，指定几种类型都可以使用。但是要注意取值时的位模式解释。 讲解定义和使用的文章，英文的，但很清晰。 应用场景：按位拼接 比如拼接两个32位int成为一个64位1234567891011121314151617int64 _integer_splice(int32 enter1, int32 enter2)&amp;#123;    typedef uni">
+<meta property="og:updated_time" content="2018-03-19T13:18:18.087Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="关键字union与位模式关键字union申请一块内存，指定几种类型都可以使用。但是要注意取值时的位模式解释。 讲解定义和使用的文章，英文的，但很清晰。 应用场景：按位拼接 比如拼接两个32位int成为一个64位1234567891011121314151617int64 _integer_splice(int32 enter1, int32 enter2)&amp;#123;    typedef uni">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-关键字union与位模式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/19/关键字union与位模式/" class="article-date">
+  <time datetime="2018-03-19T13:17:04.677Z" itemprop="datePublished">2018-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hello World
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="关键字union与位模式"><a href="#关键字union与位模式" class="headerlink" title="关键字union与位模式"></a>关键字union与位模式</h1><h2 id="关键字union"><a href="#关键字union" class="headerlink" title="关键字union"></a>关键字union</h2><p>申请一块内存，指定几种类型都可以使用。但是要注意取值时的位模式解释。</p>
+<p><a href="https://www.tutorialspoint.com/cprogramming/c_unions.htm" target="_blank" rel="noopener">讲解定义和使用的文章</a>，英文的，但很清晰。</p>
+<p><strong>应用场景</strong>：按位拼接</p>
+<p>比如拼接两个32位int成为一个64位<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">int64 _integer_splice(int32 enter1, int32 enter2)&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">union</span> union_Splice &#123;</span><br><span class="line">        <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">            int32 _low_part;  <span class="comment">//low part</span></span><br><span class="line">            int32 _high_part;  <span class="comment">//high part</span></span><br><span class="line">        &#125;;</span><br><span class="line">        int64 _splice;</span><br><span class="line">    &#125; Splice;</span><br><span class="line"></span><br><span class="line">    Splice sp;</span><br><span class="line">    sp._low_part = enter1;</span><br><span class="line">    sp._high_part = enter2;</span><br><span class="line">    int64 out = sp._splice;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> out;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="位模式bit-pattern"><a href="#位模式bit-pattern" class="headerlink" title="位模式bit pattern"></a>位模式bit pattern</h2><p>计算机存储数据，都是使用二进制位模式。不同类型的位模式存储标准并不相同。</p>
+<p>下面用int型和float型举例。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">float</span> f= <span class="number">1.0</span>;</span><br><span class="line">	<span class="keyword">int</span> i = f;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"i=%d\n"</span>, i); <span class="comment">//输出1</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> i1 = *(<span class="keyword">int</span>*)&amp;f; <span class="comment">//先取f的地址，把它“认为”是int型的位模式，再取出来</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"i1=%d\n"</span>, i1);<span class="comment">//输出一个很大的数</span></span><br><span class="line">	getchar();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>再看一个例子<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">union</span> test&#123;</span><br><span class="line">		<span class="keyword">int</span> i;</span><br><span class="line">		<span class="keyword">float</span> f;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	test ut;</span><br><span class="line">	ut.i = <span class="number">1000</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"ut.f = %d"</span>, ut.f);<span class="comment">//输出是0</span></span><br><span class="line">	getchar();</span><br><span class="line"></span><br><span class="line">	ut.f = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"ut.i = %d"</span>, ut.i);<span class="comment">//输出是很大一个数</span></span><br><span class="line">	getchar();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>参考阅读</strong>：</p>
+<p><a href="http://www.ruanyifeng.com/blog/2010/06/ieee_floating-point_representation.html" target="_blank" rel="noopener">阮一峰：浮点数的二进制表示</a><br>除了讲了浮点数在内存中的存储标准（位模式），甚至计算了与int转换后的结果。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/19/关键字union与位模式/" data-id="cjey9clkk0001wgbliu1wsh9k" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/03/19/用github和hexo搭建个人博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/03/19/关键字union与位模式/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/19/用github和hexo搭建个人博客/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2018/03/19/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
