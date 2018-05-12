@@ -3,8 +3,6 @@ title: 关键字union与位模式
 date: 2018-03-16 
 tags: c++
 ---
-# 关键字union与位模式
-
 ![](http://p6uiwb9pk.bkt.clouddn.com/union.jpg)
 
 ## 关键字union
@@ -15,6 +13,7 @@ tags: c++
 __应用场景__：按位拼接
 
 比如拼接两个32位int成为一个64位
+<!-- more -->
 ```cpp
 int64 _integer_splice(int32 enter1, int32 enter2){
 
