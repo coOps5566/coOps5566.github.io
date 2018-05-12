@@ -312,10 +312,11 @@
 
       
         
-          <h2 id="关键字union"><a href="#关键字union" class="headerlink" title="关键字union"></a>关键字union</h2><p>申请一块内存，指定几种类型都可以使用。但是要注意取值时的位模式解释。</p>
+          <p><img src="http://p6uiwb9pk.bkt.clouddn.com/union.jpg" alt=""></p>
+<h2 id="关键字union"><a href="#关键字union" class="headerlink" title="关键字union"></a>关键字union</h2><p>申请一块内存，指定几种类型都可以使用。但是要注意取值时的位模式解释。</p>
 <p><a href="https://www.tutorialspoint.com/cprogramming/c_unions.htm" target="_blank" rel="noopener">讲解定义和使用的文章</a>，英文的，但很清晰。</p>
 <p><strong>应用场景</strong>：按位拼接</p>
-<p>比如拼接两个32位int成为一个64位<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">int64 _integer_splice(int32 enter1, int32 enter2)&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">union</span> union_Splice &#123;</span><br><span class="line">        <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">            int32 _low_part;  <span class="comment">//low part</span></span><br><span class="line">            int32 _high_part;  <span class="comment">//high part</span></span><br><span class="line">        &#125;;</span><br><span class="line">        int64 _splice;</span><br><span class="line">    &#125; Splice;</span><br><span class="line"></span><br><span class="line">    Splice sp;</span><br><span class="line">    sp._low_part = enter1;</span><br><span class="line">    sp._high_part = enter2;</span><br><span class="line">    int64 out = sp._splice;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> out;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>比如拼接两个32位int成为一个64位<br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/03/16/关键字union与位模式/#more" rel="contents">
@@ -698,7 +699,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
