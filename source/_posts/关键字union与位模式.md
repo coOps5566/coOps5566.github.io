@@ -1,7 +1,11 @@
 ---
 title: 关键字union与位模式
 date: 2018-03-16 
+tags: c++
 ---
+# 关键字union与位模式
+
+![](http://p6uiwb9pk.bkt.clouddn.com/union.jpg)
 
 ## 关键字union
 申请一块内存，指定几种类型都可以使用。但是要注意取值时的位模式解释。
@@ -30,7 +34,7 @@ int64 _integer_splice(int32 enter1, int32 enter2){
     return out;
 }
 ```
-<!-- more -->
+
 ## 位模式bit pattern
 计算机存储数据，都是使用二进制位模式。不同类型的位模式存储标准并不相同。
 
