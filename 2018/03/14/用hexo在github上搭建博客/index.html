@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="严肃程序员博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="邬天博博客">
-<meta property="og:url" content="http://www.utanbo.com/index.html">
+<meta name="description" content="我对git很熟悉，hexo很陌生。如果你和我一样，这篇会很有帮助。我会对操作进行简单说明，你可以先通读全文，再实际操作。最后部分讲博客的版本管理，实现不同电脑上的更新和维护。  环境与工具 安装node.js 下载地址。检验安装成功：  1$ node -v  安装hexo  1$ npm install hexo-cli -g  NPM是随同NodeJS一起安装的包管理工具，npm 的包安装分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用hexo在github上搭建博客">
+<meta property="og:url" content="http://www.utanbo.com/2018/03/14/用hexo在github上搭建博客/index.html">
 <meta property="og:site_name" content="邬天博博客">
-<meta property="og:description" content="严肃程序员博客">
+<meta property="og:description" content="我对git很熟悉，hexo很陌生。如果你和我一样，这篇会很有帮助。我会对操作进行简单说明，你可以先通读全文，再实际操作。最后部分讲博客的版本管理，实现不同电脑上的更新和维护。  环境与工具 安装node.js 下载地址。检验安装成功：  1$ node -v  安装hexo  1$ npm install hexo-cli -g  NPM是随同NodeJS一起安装的包管理工具，npm 的包安装分">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-05-12T02:21:03.607Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="邬天博博客">
-<meta name="twitter:description" content="严肃程序员博客">
+<meta name="twitter:title" content="用hexo在github上搭建博客">
+<meta name="twitter:description" content="我对git很熟悉，hexo很陌生。如果你和我一样，这篇会很有帮助。我会对操作进行简单说明，你可以先通读全文，再实际操作。最后部分讲博客的版本管理，实现不同电脑上的更新和维护。  环境与工具 安装node.js 下载地址。检验安装成功：  1$ node -v  安装hexo  1$ npm install hexo-cli -g  NPM是随同NodeJS一起安装的包管理工具，npm 的包安装分">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://www.utanbo.com/"/>
+  <link rel="canonical" href="http://www.utanbo.com/2018/03/14/用hexo在github上搭建博客/"/>
 
 
 
 
 
-  <title>邬天博博客</title>
+  <title>用hexo在github上搭建博客 | 邬天博博客</title>
   
 
 
@@ -143,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -217,136 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.utanbo.com/2018/03/16/关键字union与位模式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="邬天博">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6uiwb9pk.bkt.clouddn.com/wtb_inch_pic_small.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="邬天博博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/16/关键字union与位模式/" itemprop="url">关键字union与位模式</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-16T00:00:00+08:00">
-                2018-03-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="关键字union"><a href="#关键字union" class="headerlink" title="关键字union"></a>关键字union</h2><p>申请一块内存，指定几种类型都可以使用。但是要注意取值时的位模式解释。</p>
-<p><a href="https://www.tutorialspoint.com/cprogramming/c_unions.htm" target="_blank" rel="noopener">讲解定义和使用的文章</a>，英文的，但很清晰。</p>
-<p><strong>应用场景</strong>：按位拼接</p>
-<p>比如拼接两个32位int成为一个64位<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">int64 _integer_splice(int32 enter1, int32 enter2)&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">typedef</span> <span class="keyword">union</span> union_Splice &#123;</span><br><span class="line">        <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">            int32 _low_part;  <span class="comment">//low part</span></span><br><span class="line">            int32 _high_part;  <span class="comment">//high part</span></span><br><span class="line">        &#125;;</span><br><span class="line">        int64 _splice;</span><br><span class="line">    &#125; Splice;</span><br><span class="line"></span><br><span class="line">    Splice sp;</span><br><span class="line">    sp._low_part = enter1;</span><br><span class="line">    sp._high_part = enter2;</span><br><span class="line">    int64 out = sp._splice;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> out;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/16/关键字union与位模式/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -376,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/14/用hexo在github上搭建博客/" itemprop="url">用hexo在github上搭建博客</a></h1>
+          <h1 class="post-title" itemprop="name headline">用hexo在github上搭建博客</h1>
         
 
         <div class="post-meta">
@@ -428,8 +299,7 @@
       
 
       
-        
-          <blockquote>
+        <blockquote>
 <p>我对git很熟悉，hexo很陌生。如果你和我一样，这篇会很有帮助。我会对操作进行简单说明，你可以先通读全文，再实际操作。最后部分讲博客的版本管理，实现不同电脑上的更新和维护。</p>
 </blockquote>
 <h1 id="环境与工具"><a href="#环境与工具" class="headerlink" title="环境与工具"></a>环境与工具</h1><ol>
@@ -460,15 +330,58 @@
 <li><p>浏览器访问 localhost:7788 这时看到的hello world文章。</p>
 </li>
 </ol>
-<p>至此，本地的工作就完成了。你只需要把markdown文档放到_posts路径下，依次执行hexo g、hexo s 就可以本地访问博客。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/14/用hexo在github上搭建博客/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<p>至此，本地的工作就完成了。你只需要把markdown文档放到_posts路径下，依次执行hexo g、hexo s 就可以本地访问博客。<br><a id="more"></a></p>
+<h1 id="把博客推送到github上"><a href="#把博客推送到github上" class="headerlink" title="把博客推送到github上"></a>把博客推送到github上</h1><p>github有一个叫github pages的服务，其初衷是给托管其上的项目建立主页。提供300M的免费空间，我们按照规则放置静态网页，便可以访问。下面我们把博客部署到github上。</p>
+<ol>
+<li><p>建立github仓库，仓库名字要求与注册的github帐号一样。</p>
+</li>
+<li><p>修改hexo配置文件_config.yml 。同名文件有两个，一个是在my_blog_folder_name路径下，是hexo基础配置；另一个是在my_blog_folder_name\themes\landscape路径下，是配置博客主题的。这里用第一个my_blog_folder_name目录下的。</p>
+<p> 修改配置文件时注意冒号后有空格。</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">	type: git</span><br><span class="line">	repo: git@github.com:your_account_name/your_account_name.github.io.git #这里填入你之前在GitHub上创建仓库的完整路径</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+<p> 这是给hexo d 这个命令做相应的配置，让hexo知道你要部署到哪，很显然，我们部署在我们GitHub仓库的master分支。</p>
+</li>
+<li><p>把本地网页文件推到github的仓库上，还需要安装Git部署插件，cd命令进入my_blog_folder_name路径，输入命令：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>最后，执行清理、生成、部署，命令依次是</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean </span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p> 提示 Deploy done: git，表示成功。</p>
+</li>
+<li><p>浏览器访问，发现你的博客已经上线了，可以在网络上被访问了。</p>
+</li>
+</ol>
+<h1 id="使用git管理"><a href="#使用git管理" class="headerlink" title="使用git管理"></a>使用git管理</h1><p>现在，你可以在本地写博文、部署、公网访问。但是，文章和hexo的文件都没有用git工具管理起来。明白了原理，加入版本管理轻而易举，只需稍作改变。</p>
+<p>我们重新来，重复上边讲过的步骤，但是顺序略有不同。</p>
+<ol>
+<li><p>在github上创建仓库，仓库名与账户名相同。</p>
+</li>
+<li><p>clone仓库到本地。</p>
+</li>
+<li><p>创建分支myhexo，切换到myhexo分支。分支名随意。</p>
+</li>
+<li><p>cd命令进入本地仓库的目录，hexo init初始化。这里会提示不是空目录，那么创建并进入一个空目录，执行初始化，再把文件copy出来就行。</p>
+</li>
+<li><p>执行命令hexo g，hexo s -p 7788，本地访问，验证成功。</p>
+</li>
+<li><p>修改hexo配置文件_config.yml ，与上文一样。</p>
+</li>
+<li><p>部署，hexo d，公网访问成功。</p>
+</li>
+<li><p>git commit提交修改，git push origin myhexo把本地分支推送到远程。</p>
+</li>
+</ol>
+<p>那么，就可以在myhexo分支管理博文和hexo文件，部署到master分支。</p>
+<p>如果需要在另一台电脑上也更新博客，可以这么做：</p>
+<ol>
+<li><p>clone仓库到本地。</p>
+</li>
+<li><p>安装hexo</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>themes文件夹下，主题文件没了，需要重新安装</p>
+</li>
+</ol>
+
       
     </div>
     
@@ -485,136 +398,32 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.utanbo.com/2018/03/13/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="邬天博">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://p6uiwb9pk.bkt.clouddn.com/wtb_inch_pic_small.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="邬天博博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/13/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-13T00:00:00+08:00">
-                2018-03-13
-              </time>
+              <a href="/2018/03/13/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/2018/03/16/关键字union与位模式/" rel="prev" title="关键字union与位模式">
+                关键字union与位模式 <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/13/hello-world/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -624,10 +433,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -635,6 +445,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -655,8 +469,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -702,6 +525,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#环境与工具"><span class="nav-number">1.</span> <span class="nav-text">环境与工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#用hexo搭建一个本地的博客"><span class="nav-number">2.</span> <span class="nav-text">用hexo搭建一个本地的博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#把博客推送到github上"><span class="nav-number">3.</span> <span class="nav-text">把博客推送到github上</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用git管理"><span class="nav-number">4.</span> <span class="nav-text">使用git管理</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -842,6 +681,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
